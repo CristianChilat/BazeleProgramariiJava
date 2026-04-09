@@ -1,0 +1,51 @@
+Ex1:
+a1⌃ = 10;
+a2⌃ = 15;
+
+a1 = nil;
+a2 = nil;
+
+a1 = a2;
+
+a1⌃ = 11;
+a2⌃ = 16; > a1⌃ = 16;
+
+Result: 10 15 16 16
+
+
+Ex:2
+var a,b:pointer to Integer
+begin
+    a^:=1 < eroare (nu este initializat a)
+    if a=nil then
+    read(a)
+end < eroare (nu trebuei sa fie aici end)
+    b:=nil
+    b^:=2 < eroare (nu este initializat b si este nil)
+    allocate(b,size(integer))
+    read(b^)
+    writeInt(b)
+    allocate(a, size(integer))
+    b:=a
+    deallocate(a,size(integer))
+    b^:=2
+    writeInt(b)
+end.
+
+
+Ex3:
+Raspuns: b) 1A10
+
+
+Ex:4
+Raspuns: c) 1B1
+
+
+Ex5:
+Raspuns: a) c1010p
+
+
+Ex6:
+a) Tipul variabilelor este boolean (variabile de tip logica)
+b) La a nu se poate de acordat o referinta la b deoarece nu este variabila dinamica
+c) Doar a poate fi distrus prin Deallocate. b nu este alocat dynamic, deci nu poate fi distrus prin Deallocate.
